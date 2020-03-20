@@ -8,5 +8,9 @@ app.listen(3000, () => {
 app.use(express.static("./public"));
 
 app.get("/get_text", (req ,rest) => {
-    rest.send("hello World");
+    rest.send({
+        title : "mon article",
+        content : "le super contenu de mon article :)",
+        author: "Darkann",
+    });
 });
