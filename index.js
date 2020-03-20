@@ -7,8 +7,7 @@ app.listen(3000, () => {
 app.get("/", (request, response) => {
     console.log("access to / path");
     const html = fs
-        .readFileSync("./src/index.html")
-        .toString("utf8");
+        .readFileSync("./src/index.html");
         
     response.send(html);
 });
